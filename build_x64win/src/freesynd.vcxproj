@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{03BBA6A7-D2FF-38F0-87A3-933DCC9A81E6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>freesynd</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">freesynd.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">freesyndD</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">freesynd.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">freesynd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">freesynd.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">freesynd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">freesynd.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">freesynd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\SDL2\include\SDL2;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "I:/Coding/FreeSynd-bni/SDL2/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Image/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Mixer/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SYSTEM_SDL;PREFIX="";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SYSTEM_SDL;PREFIX=\"\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>I:\Coding\FreeSynd-bni\Libpng\lib\libpng16d.lib;I:\Coding\FreeSynd-bni\Zlib\lib\zlibd.lib;I:\Coding\FreeSynd-bni\SDL2_Image\lib\x64\SDL2_image.lib;I:\Coding\FreeSynd-bni\SDL2_Mixer\lib\x64\SDL2_mixer.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>I:/Coding/FreeSynd-bni/build_x64win/src/Debug/freesynd.lib</ImportLibrary>
+      <ProgramDataBaseFile>I:/Coding/FreeSynd-bni/build_x64win/src/Debug/freesynd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "..\..\FreeSynd\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\SDL2\include\SDL2;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "I:/Coding/FreeSynd-bni/SDL2/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Image/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Mixer/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX="";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX=\"\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>I:\Coding\FreeSynd-bni\Libpng\lib\libpng16.lib;I:\Coding\FreeSynd-bni\Zlib\lib\zlib.lib;I:\Coding\FreeSynd-bni\SDL2_Image\lib\x64\SDL2_image.lib;I:\Coding\FreeSynd-bni\SDL2_Mixer\lib\x64\SDL2_mixer.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>I:/Coding/FreeSynd-bni/build_x64win/src/Release/freesynd.lib</ImportLibrary>
+      <ProgramDataBaseFile>I:/Coding/FreeSynd-bni/build_x64win/src/Release/freesynd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "..\..\FreeSynd\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\SDL2\include\SDL2;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "I:/Coding/FreeSynd-bni/SDL2/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Image/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Mixer/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX="";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX=\"\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>I:\Coding\FreeSynd-bni\Libpng\lib\libpng16.lib;I:\Coding\FreeSynd-bni\Zlib\lib\zlib.lib;I:\Coding\FreeSynd-bni\SDL2_Image\lib\x64\SDL2_image.lib;I:\Coding\FreeSynd-bni\SDL2_Mixer\lib\x64\SDL2_mixer.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>I:/Coding/FreeSynd-bni/build_x64win/src/MinSizeRel/freesynd.lib</ImportLibrary>
+      <ProgramDataBaseFile>I:/Coding/FreeSynd-bni/build_x64win/src/MinSizeRel/freesynd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "..\..\FreeSynd\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\SDL2\include\SDL2;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "I:/Coding/FreeSynd-bni/SDL2/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Image/include" /external:I "I:/Coding/FreeSynd-bni/SDL2_Mixer/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX="";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SYSTEM_SDL;PREFIX=\"\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>I:\Coding\FreeSynd-bni\Libpng\include;I:\Coding\FreeSynd-bni\Zlib\include;I:\Coding\FreeSynd-bni\src;I:\Coding\FreeSynd-bni\build_x64win\src;I:\Coding\FreeSynd-bni\SDL2\include;I:\Coding\FreeSynd-bni\SDL2_Image\include;I:\Coding\FreeSynd-bni\SDL2_Mixer\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>I:\Coding\FreeSynd-bni\Libpng\lib\libpng16.lib;I:\Coding\FreeSynd-bni\Zlib\lib\zlib.lib;I:\Coding\FreeSynd-bni\SDL2_Image\lib\x64\SDL2_image.lib;I:\Coding\FreeSynd-bni\SDL2_Mixer\lib\x64\SDL2_mixer.lib;I:\Coding\FreeSynd-bni\SDL2\lib\x64\SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>I:/Coding/FreeSynd-bni/build_x64win/src/RelWithDebInfo/freesynd.lib</ImportLibrary>
+      <ProgramDataBaseFile>I:/Coding/FreeSynd-bni/build_x64win/src/RelWithDebInfo/freesynd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "..\..\FreeSynd\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="I:\Coding\FreeSynd-bni\freesynd.ini">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating default_ini.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\FreeSynd\freesynd.ini embedded_default_ini default_ini.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\Debug\embed.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating default_ini.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\FreeSynd\freesynd.ini embedded_default_ini default_ini.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\Release\embed.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating default_ini.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\FreeSynd\freesynd.ini embedded_default_ini default_ini.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\MinSizeRel\embed.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating default_ini.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\FreeSynd\freesynd.ini embedded_default_ini default_ini.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\RelWithDebInfo\embed.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="I:\Coding\FreeSynd-bni\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule I:/Coding/FreeSynd-bni/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SI:/Coding/FreeSynd-bni -BI:/Coding/FreeSynd-bni/build_x64win --check-stamp-file I:/Coding/FreeSynd-bni/build_x64win/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">I:\Coding\FreeSynd-bni\src\tools\embed.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule I:/Coding/FreeSynd-bni/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SI:/Coding/FreeSynd-bni -BI:/Coding/FreeSynd-bni/build_x64win --check-stamp-file I:/Coding/FreeSynd-bni/build_x64win/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">I:\Coding\FreeSynd-bni\src\tools\embed.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule I:/Coding/FreeSynd-bni/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SI:/Coding/FreeSynd-bni -BI:/Coding/FreeSynd-bni/build_x64win --check-stamp-file I:/Coding/FreeSynd-bni/build_x64win/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">I:\Coding\FreeSynd-bni\src\tools\embed.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule I:/Coding/FreeSynd-bni/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SI:/Coding/FreeSynd-bni -BI:/Coding/FreeSynd-bni/build_x64win --check-stamp-file I:/Coding/FreeSynd-bni/build_x64win/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">I:\Coding\FreeSynd-bni\src\tools\embed.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">I:\Coding\FreeSynd-bni\build_x64win\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\appcontext.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agent.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agentmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\app.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\mod.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\objectivedesc.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weaponholder.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\shot.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\vehicle.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\train.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weapon.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\research.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\squad.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamesession.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamecontroller.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\missionbriefing.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\researchmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\actions.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\behaviour.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\freesynd.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ipastim.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\dirtylist.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fliplayer.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\font.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fontmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\screen.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\sprite.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\spritemanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tile.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tilemanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\map.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapobject.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\agentselectorrenderer.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\maprenderer.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\minimaprenderer.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\briefmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\confmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\debriefmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\flimenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\gameplaymenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\loadingmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\loadsavemenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\logoutmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\mainmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\mapmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menumanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\gamemenufactory.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\researchmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\selectmenu.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\squadselection.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\widget.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mission.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\missionmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\modmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ped.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedactions.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedpathfinding.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\audio.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\musicmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixermusic.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixersound.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\soundmanager.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\xmidi.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\system_sdl.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\configfile.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\ccrc32.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\dernc.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\file.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\log.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\portablefile.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\seqmodel.cpp" />
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\weaponmanager.cpp" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\appcontext.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\agent.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\agentmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\app.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\common.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\config.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\cp437.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ipastim.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\keys.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\map.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mapmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mapobject.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mission.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\missionmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\modmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\modowner.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\path.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\pathsurfaces.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ped.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\pedmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\resources.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\system.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\system_sdl.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\version.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\weaponmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gameevent.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gamesession.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gamecontroller.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\missionbriefing.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\researchmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ia\actions.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ia\behaviour.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\dirtylist.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\fliplayer.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\font.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\fontmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\screen.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\sprite.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\spritemanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\tile.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\tilemanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\mod.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\vehicle.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\weapon.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\position.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\objectivedesc.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\leveldata.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\damage.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\shot.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\weaponholder.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\train.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\research.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\squad.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\agentselectorrenderer.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\maprenderer.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\minimaprenderer.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\briefmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\confmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\debriefmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\flimenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gameplaymenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\loadingmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\loadsavemenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\logoutmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\mainmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\mapmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\menu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\menumanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gamemenufactory.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gamemenuid.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\researchmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\selectmenu.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\squadselection.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\widget.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\audio.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\music.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\musicmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixermusic.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixersound.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sound.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\soundmanager.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\xmidi.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\configfile.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\ccrc32.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\dernc.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\file.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\log.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\portablefile.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\seqmodel.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\singleton.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\timer.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\checked.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\core.h" />
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\unchecked.h" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="I:\Coding\FreeSynd-bni\build_x64win\ZERO_CHECK.vcxproj">
+      <Project>{87167A83-6EFD-3A87-881C-2DA3F633EA48}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="I:\Coding\FreeSynd-bni\build_x64win\src\embed.vcxproj">
+      <Project>{2D02ECC4-6306-3536-AE94-CDBFFCA9B711}</Project>
+      <Name>embed</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\dump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\dirtylist.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fliplayer.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\font.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fontmanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\screen.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\sprite.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\spritemanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tile.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tilemanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\audio.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\musicmanager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixermusic.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixersound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\soundmanager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\xmidi.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menumanager.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\widget.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\appcontext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agentmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ipastim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ped.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedactions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedpathfinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\modmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\missionmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\vehicle.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\train.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\weaponmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamecontroller.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamesession.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\missionbriefing.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\researchmanager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\mod.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\research.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\squad.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\objectivedesc.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\shot.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weaponholder.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weapon.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\actions.cpp">
+      <Filter>IA</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\behaviour.cpp">
+      <Filter>IA</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mission.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\dernc.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\file.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\log.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\portablefile.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\configfile.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\ccrc32.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\seqmodel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\editorapp.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\editormenufactory.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\logoutmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\mainmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\fontmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\animmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\searchmissionmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\editor\listmissionmenu.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\system_sdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\editorapp.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\editormenufactory.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\editormenuid.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\logoutmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\mainmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\fontmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\animmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\searchmissionmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\editor\listmissionmenu.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="I:\Coding\FreeSynd-bni\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8AA9E777-0760-35E1-8F7D-3A7B1EC4D7CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{DDEE197C-3BA2-3F22-B33D-ACD009BA1B8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gfx">
+      <UniqueIdentifier>{E7A5C592-E1CD-3BB5-9B8F-F4A610288FA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IA">
+      <UniqueIdentifier>{ACC20823-7898-3037-9101-380F0DE1D192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menus">
+      <UniqueIdentifier>{44389997-01DB-3A5C-A25C-330458C6DA5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{68248B6B-3245-3326-A936-EB3659306759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{02AEAC9F-11BD-398A-85A9-2AEB66F27157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B8BC065C-A925-341A-80A6-D13E88E7D4ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{44D06DBB-34D1-3C42-837C-A76B223097A1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\appcontext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\agentmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\mod.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\objectivedesc.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weaponholder.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\shot.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\vehicle.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\train.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\weapon.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\research.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\model\squad.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamesession.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\gamecontroller.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\missionbriefing.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\core\researchmanager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\actions.cpp">
+      <Filter>IA</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ia\behaviour.cpp">
+      <Filter>IA</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\freesynd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ipastim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\dirtylist.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fliplayer.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\font.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\fontmanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\screen.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\sprite.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\spritemanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tile.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\gfx\tilemanager.cpp">
+      <Filter>Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mapmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\agentselectorrenderer.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\maprenderer.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\minimaprenderer.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\briefmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\confmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\debriefmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\flimenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\gameplaymenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\loadingmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\loadsavemenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\logoutmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\mainmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\mapmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\menumanager.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\gamemenufactory.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\researchmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\selectmenu.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\squadselection.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\menus\widget.cpp">
+      <Filter>Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\mission.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\missionmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\modmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\ped.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedactions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\pedpathfinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\audio.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\musicmanager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixermusic.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixersound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\soundmanager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\sound\xmidi.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\system_sdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\configfile.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\ccrc32.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\dernc.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\file.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\log.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\portablefile.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\utils\seqmodel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="I:\Coding\FreeSynd-bni\src\weaponmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\build_x64win\src\default_ini.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\appcontext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\agentmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\app.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\cp437.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ipastim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\keys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mapmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mapobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\mission.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\missionmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\modmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\modowner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\pathsurfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ped.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\pedmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\system_sdl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\weaponmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gameevent.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gamesession.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\gamecontroller.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\missionbriefing.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\core\researchmanager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ia\actions.h">
+      <Filter>IA</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\ia\behaviour.h">
+      <Filter>IA</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\dirtylist.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\fliplayer.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\font.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\fontmanager.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\screen.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\sprite.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\spritemanager.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\tile.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\gfx\tilemanager.h">
+      <Filter>Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\mod.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\vehicle.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\weapon.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\position.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\objectivedesc.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\leveldata.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\damage.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\shot.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\weaponholder.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\train.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\research.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\model\squad.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\agentselectorrenderer.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\maprenderer.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\minimaprenderer.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\briefmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\confmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\debriefmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\flimenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gameplaymenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\loadingmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\loadsavemenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\logoutmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\mainmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\mapmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\menu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\menumanager.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gamemenufactory.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\gamemenuid.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\researchmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\selectmenu.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\squadselection.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\menus\widget.h">
+      <Filter>Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\audio.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\music.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\musicmanager.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixermusic.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sdlmixersound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\sound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\soundmanager.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\sound\xmidi.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\configfile.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\ccrc32.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\dernc.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\file.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\log.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\portablefile.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\seqmodel.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\singleton.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\timer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\checked.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\core.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="I:\Coding\FreeSynd-bni\src\utils\utf8\unchecked.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="I:\Coding\FreeSynd-bni\freesynd.ini" />
+    <CustomBuild Include="I:\Coding\FreeSynd-bni\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8AA9E777-0760-35E1-8F7D-3A7B1EC4D7CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gfx">
+      <UniqueIdentifier>{E7A5C592-E1CD-3BB5-9B8F-F4A610288FA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B59C7CAA-8686-3861-84C4-E698ED93170D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IA">
+      <UniqueIdentifier>{ACC20823-7898-3037-9101-380F0DE1D192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menus">
+      <UniqueIdentifier>{44389997-01DB-3A5C-A25C-330458C6DA5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{68248B6B-3245-3326-A936-EB3659306759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{02AEAC9F-11BD-398A-85A9-2AEB66F27157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B8BC065C-A925-341A-80A6-D13E88E7D4ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{44D06DBB-34D1-3C42-837C-A76B223097A1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
