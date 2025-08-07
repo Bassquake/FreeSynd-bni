@@ -5,6 +5,7 @@
 /cmake-build-release
 /SYND
 
+# FreeSynd specific
 FreeSynd/*
 !FreeSynd/put_game_files_here.txt
 build_x64win/.vs
@@ -13,3 +14,12 @@ build_x64win/src
 build_x64win/x64
 build_x64win/cmake_install.cmake
 build_x64win/CMakeCache.txt
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs and temp
+*.log
+*.tmp
