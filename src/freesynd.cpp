@@ -136,7 +136,7 @@ void print_usage() {
 
 int main(int argc, char *argv[]) {
 
-    printf("Freesynd v0.8 (may 2016)\n");
+    printf("Freesynd v0.8 - Bassquake Build - (Jul 2025)\n");
 
 #ifdef CHEAP_LEAK_DETECTION
     initLeakDetection();
@@ -153,6 +153,7 @@ int main(int argc, char *argv[]) {
     int cheatCodeIndex = -1;
     // If different from -1, the game will start directly on mission
     // with the given id
+    // NOTICE Jump to mission
     int start_mission = -1;
     // This variable stores the path to the Freesynd configuration file.
     std::string iniPath;
@@ -221,7 +222,7 @@ int main(int argc, char *argv[]) {
     }
 
     LOG(Log::k_FLG_INFO, "Main", "main", ("----- Initializing application..."))
-    std::auto_ptr<App> app(new App(disable_sound));
+    std::unique_ptr<App> app(new App(disable_sound));
 
     if (app->initialize(iniPath)) {
         // setting the cheat codes

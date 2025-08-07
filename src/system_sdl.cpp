@@ -63,7 +63,7 @@ bool SystemSDL::initialize(bool fullscreen) {
     SDL_SetHint(SDL_HINT_RENDER_DRIVER, "metal");
 
     if (SDL_Init(SDL_INIT_VIDEO
-        ) < 0) {
+    ) < 0) {
         printf("Critical error, SDL could not be initialized!");
         return false;
     }
@@ -73,7 +73,21 @@ bool SystemSDL::initialize(bool fullscreen) {
     SDL_RenderSetLogicalSize(renderer_, GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT);
     SDL_RenderSetIntegerScale(renderer_, SDL_TRUE);
 
-    temp_surf_ = SDL_CreateRGBSurface(0, GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT, 8, 0, 0, 0, 0);
+    // Use SDL_PIXELFORMAT_INDEX8 to indicate an 8-bit indexed surface
+    temp_surf_ = SDL_CreateRGBSurfaceWithFormat(0, GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT, 8, SDL_PIXELFORMAT_INDEX8);
+    if (!temp_surf_) {
+        printf("Failed to create surface: %s\n", SDL_GetError());
+        return false;
+    }
+
+    SDL_Color colors[256];
+    for (int i = 0; i < 256; ++i) {
+        colors[i].r = i;
+        colors[i].g = i;
+        colors[i].b = i;
+        colors[i].a = 255;
+    }
+    SDL_SetPaletteColors(temp_surf_->format->palette, colors, 0, 256); // Initialize palette entries
 
     texture_ = SDL_CreateTextureFromSurface(renderer_, temp_surf_);
 
@@ -81,9 +95,10 @@ bool SystemSDL::initialize(bool fullscreen) {
     // Init SDL_Image library
     int sdl_img_flags = IMG_INIT_PNG;
     int initted = IMG_Init(sdl_img_flags);
-    if ( (initted & sdl_img_flags) != sdl_img_flags ) {
+    if ((initted & sdl_img_flags) != sdl_img_flags) {
         printf("Failed to init SDL_Image : %s\n", IMG_GetError());
-    } else {
+    }
+    else {
         // Load the cursor sprites
         if (loadCursorSprites()) {
             // Cursor movement is managed by the application
@@ -106,41 +121,33 @@ void SystemSDL::updateScreen() {
     if (g_Screen.dirty() || (cursor_visible_ && update_cursor_)) {
         SDL_LockSurface(temp_surf_);
 
-        const uint8 *pixeldata = g_Screen.pixels();
+        const uint8* pixeldata = g_Screen.pixels();
+        memcpy(temp_surf_->pixels, pixeldata, GAME_SCREEN_WIDTH * GAME_SCREEN_HEIGHT * sizeof(Uint8));
 
-        // We do manual blitting to convert from 8bpp palette indexed values to 32bpp RGB for each pixel
-        uint8 r, g, b;
-        for (int i = 0; i < GAME_SCREEN_WIDTH * GAME_SCREEN_HEIGHT; i++) {
-            uint8 index = pixeldata[i];
-
-            r = temp_surf_->format->palette->colors[index].r;
-            g = temp_surf_->format->palette->colors[index].g;
-            b = temp_surf_->format->palette->colors[index].b;
-
-            Uint32 c = ((r << 16) | (g << 8) | (b << 0)) | (255 << 24);
-
-            pixels_[i] = c;
+        if (SDL_MUSTLOCK(temp_surf_)) {
+            SDL_UnlockSurface(temp_surf_);
         }
 
-        memcpy(temp_surf_->pixels, pixels_, GAME_SCREEN_WIDTH * GAME_SCREEN_HEIGHT * sizeof (Uint32));
+        // Convert indexed pixels to RGBA manually
+        Uint32* rgba_pixels = new Uint32[GAME_SCREEN_WIDTH * GAME_SCREEN_HEIGHT];
+        SDL_Color* palette = temp_surf_->format->palette->colors;
+        for (int i = 0; i < GAME_SCREEN_WIDTH * GAME_SCREEN_HEIGHT; ++i) {
+            SDL_Color c = palette[pixeldata[i]];
+            // Construct RGBA value manually (assuming SDL_PIXELFORMAT_ARGB8888)
+            rgba_pixels[i] = (c.a << 24) | (c.r << 16) | (c.g << 8) | (c.b);
+        }
 
-        SDL_UnlockSurface(temp_surf_);
-
-        SDL_RenderClear(renderer_);
-
-        SDL_UpdateTexture(texture_, NULL, temp_surf_->pixels, GAME_SCREEN_WIDTH * sizeof (Uint32));
+        SDL_UpdateTexture(texture_, NULL, rgba_pixels, GAME_SCREEN_WIDTH * sizeof(Uint32));
+        delete[] rgba_pixels;
 
         SDL_RenderCopy(renderer_, texture_, NULL, NULL);
 
         if (cursor_visible_) {
             SDL_Rect dst;
-
             dst.x = cursor_x_ - cursor_hs_x_;
             dst.y = cursor_y_ - cursor_hs_y_;
             dst.w = dst.h = CURSOR_WIDTH;
-
             SDL_RenderCopy(renderer_, cursor_texture_, &cursor_rect_, &dst);
-
             update_cursor_ = false;
         }
 
@@ -153,54 +160,54 @@ void SystemSDL::updateScreen() {
  * a not printable key) returns the corresponding entry in the KeyFunc enumeration.
  * \returns If key code is not a function key, returns KEY_UNKNOWN.
  */
-void SystemSDL::checkKeyCodes(SDL_Keysym keysym, Key &key) {
+void SystemSDL::checkKeyCodes(SDL_Keysym keysym, Key& key) {
     key.keyFunc = KFC_UNKNOWN;
     key.keyVirt = KVT_UNKNOWN;
-    switch(keysym.sym) {
-        case SDLK_ESCAPE: key.keyFunc = KFC_ESCAPE; break;
-        case SDLK_BACKSPACE: key.keyFunc = KFC_BACKSPACE; break;
-        case SDLK_RETURN: key.keyFunc = KFC_RETURN; break;
-        case SDLK_DELETE: key.keyFunc = KFC_DELETE; break;
-        case SDLK_UP:
-            key.keyFunc = static_cast < KeyFunc > (KFC_UP + (keysym.sym - SDLK_UP));
-            break;
-        case SDLK_DOWN:
-            key.keyFunc = static_cast < KeyFunc > (KFC_DOWN + (keysym.sym - SDLK_DOWN));
-            break;
-        case SDLK_RIGHT:
-            key.keyFunc = static_cast < KeyFunc > (KFC_RIGHT + (keysym.sym - SDLK_RIGHT));
-            break;
-        case SDLK_LEFT:
-            key.keyFunc = static_cast < KeyFunc > (KFC_LEFT + (keysym.sym - SDLK_LEFT));
-            break;
-        case SDLK_INSERT:
-        case SDLK_HOME:
-        case SDLK_END:
-        case SDLK_PAGEUP:
-        case SDLK_PAGEDOWN:
-            key.keyFunc = static_cast < KeyFunc > (KFC_UP + (keysym.sym - SDLK_UP));
-            break;
-        case SDLK_F1:
-        case SDLK_F2:
-        case SDLK_F3:
-        case SDLK_F4:
-        case SDLK_F5:
-        case SDLK_F6:
-        case SDLK_F7:
-        case SDLK_F8:
-        case SDLK_F9:
-        case SDLK_F10:
-        case SDLK_F11:
-        case SDLK_F12:
-            key.keyFunc = static_cast < KeyFunc > (KFC_F1 + (keysym.sym - SDLK_F1));
-            break;
-        case SDLK_0:case SDLK_1:case SDLK_2:case SDLK_3:case SDLK_4:
-        case SDLK_5:case SDLK_6:case SDLK_7:case SDLK_8:case SDLK_9:
-            key.keyVirt = static_cast < KeyVirtual > (KVT_NUMPAD0 + (keysym.sym - SDLK_0));
-            break;
-        default:
-            // unused key
-            break;
+    switch (keysym.sym) {
+    case SDLK_ESCAPE: key.keyFunc = KFC_ESCAPE; break;
+    case SDLK_BACKSPACE: key.keyFunc = KFC_BACKSPACE; break;
+    case SDLK_RETURN: key.keyFunc = KFC_RETURN; break;
+    case SDLK_DELETE: key.keyFunc = KFC_DELETE; break;
+    case SDLK_UP:
+        key.keyFunc = static_cast <KeyFunc> (KFC_UP + (keysym.sym - SDLK_UP));
+        break;
+    case SDLK_DOWN:
+        key.keyFunc = static_cast <KeyFunc> (KFC_DOWN + (keysym.sym - SDLK_DOWN));
+        break;
+    case SDLK_RIGHT:
+        key.keyFunc = static_cast <KeyFunc> (KFC_RIGHT + (keysym.sym - SDLK_RIGHT));
+        break;
+    case SDLK_LEFT:
+        key.keyFunc = static_cast <KeyFunc> (KFC_LEFT + (keysym.sym - SDLK_LEFT));
+        break;
+    case SDLK_INSERT:
+    case SDLK_HOME:
+    case SDLK_END:
+    case SDLK_PAGEUP:
+    case SDLK_PAGEDOWN:
+        key.keyFunc = static_cast <KeyFunc> (KFC_UP + (keysym.sym - SDLK_UP));
+        break;
+    case SDLK_F1:
+    case SDLK_F2:
+    case SDLK_F3:
+    case SDLK_F4:
+    case SDLK_F5:
+    case SDLK_F6:
+    case SDLK_F7:
+    case SDLK_F8:
+    case SDLK_F9:
+    case SDLK_F10:
+    case SDLK_F11:
+    case SDLK_F12:
+        key.keyFunc = static_cast <KeyFunc> (KFC_F1 + (keysym.sym - SDLK_F1));
+        break;
+    case SDLK_0:case SDLK_1:case SDLK_2:case SDLK_3:case SDLK_4:
+    case SDLK_5:case SDLK_6:case SDLK_7:case SDLK_8:case SDLK_9:
+        key.keyVirt = static_cast <KeyVirtual> (KVT_NUMPAD0 + (keysym.sym - SDLK_0));
+        break;
+    default:
+        // unused key
+        break;
     }
 }
 
@@ -213,7 +220,7 @@ void SystemSDL::checkKeyCodes(SDL_Keysym keysym, Key &key) {
  * when a regular key is pressed. So that the application knows
  * if multiple modifier keys are pressed at the same time (ie Ctrl/Shift)
  */
-bool SystemSDL::pumpEvents(FS_Event *pEvtOut) {
+bool SystemSDL::pumpEvents(FS_Event* pEvtOut) {
     SDL_Event evtIn;
 
     pEvtOut->type = EVT_NONE;
@@ -224,89 +231,89 @@ bool SystemSDL::pumpEvents(FS_Event *pEvtOut) {
             pEvtOut->quit.type = EVT_QUIT;
             break;
         case SDL_KEYDOWN:
-            {
+        {
             // Check if key pressed is a modifier
-            switch(evtIn.key.keysym.sym) {
-                case SDLK_RSHIFT:
-                    keyModState_ = keyModState_ | KMD_RSHIFT; 
-                    break;
-                case SDLK_LSHIFT:
-                    keyModState_ = keyModState_ | KMD_LSHIFT; 
-                    break;
-                case SDLK_RCTRL:
-                    keyModState_ = keyModState_ | KMD_RCTRL;
-                    // NOTICE Hide cursor
-                    g_System.hideCursor();
-                    break;
-                case SDLK_LCTRL:
-                    keyModState_ = keyModState_ | KMD_LCTRL;
-                    // NOTICE Hide cursor
-                    g_System.hideCursor();
-                    break;
-                case SDLK_RALT:
-                    keyModState_ = keyModState_ | KMD_RALT; 
-                    break;
-                case SDLK_LALT:
-                    keyModState_ = keyModState_ | KMD_LALT; 
-                    break;
-                default:
-                    // We pass the event only if it's not a allowed modifier key
-                    // Plus, the application receives event only when key is pressed
-                    // not released.
-                    pEvtOut->type = EVT_KEY_DOWN;
-                    Key key;
-                    key.unicode = 0;
-                    checkKeyCodes(evtIn.key.keysym, key);
-                    if (key.keyFunc == KFC_UNKNOWN) {
-                        key.unicode = evtIn.key.keysym.sym;
-#if _DEBUG
-                        printf( "Scancode: 0x%02X", evtIn.key.keysym.scancode );
-                        printf( ", Name: %s", SDL_GetKeyName( evtIn.key.keysym.sym ) );
-                        printf(", Unicode: " );
-                        if( evtIn.key.keysym.unicode < 0x80 && evtIn.key.keysym.unicode > 0 ){
-                            printf( "%c (0x%04X)\n", (char)evtIn.key.keysym.unicode,
-                                    evtIn.key.keysym.unicode );
-                        } else{
-                            printf( "? (0x%04X)\n", evtIn.key.keysym.unicode );
-                        }
-#endif
-                    }
-                    pEvtOut->key.key = key;
-                    pEvtOut->key.keyMods = keyModState_;
-                    break;
-                } // end switch
-            } // end case SDL_KEYDOWN
-            break;
+            switch (evtIn.key.keysym.sym) {
+            case SDLK_RSHIFT:
+                keyModState_ = keyModState_ | KMD_RSHIFT;
+                break;
+            case SDLK_LSHIFT:
+                keyModState_ = keyModState_ | KMD_LSHIFT;
+                break;
+            case SDLK_RCTRL:
+                keyModState_ = keyModState_ | KMD_RCTRL;
+                // NOTICE Hide cursor
+                g_System.hideCursor();
+                break;
+            case SDLK_LCTRL:
+                keyModState_ = keyModState_ | KMD_LCTRL;
+                // NOTICE Hide cursor
+                g_System.hideCursor();
+                break;
+            case SDLK_RALT:
+                keyModState_ = keyModState_ | KMD_RALT;
+                break;
+            case SDLK_LALT:
+                keyModState_ = keyModState_ | KMD_LALT;
+                break;
+            default:
+                // We pass the event only if it's not a allowed modifier key
+                // Plus, the application receives event only when key is pressed
+                // not released.
+                pEvtOut->type = EVT_KEY_DOWN;
+                Key key;
+                key.unicode = 0;
+                checkKeyCodes(evtIn.key.keysym, key);
+                if (key.keyFunc == KFC_UNKNOWN) {
+                    key.unicode = evtIn.key.keysym.sym;
+                    /*#if _DEBUG
+                                            printf( "Scancode: 0x%02X", evtIn.key.keysym.scancode );
+                                            printf( ", Name: %s", SDL_GetKeyName( evtIn.key.keysym.sym ) );
+                                            printf(", Unicode: " );
+                                            if( evtIn.key.keysym.unicode < 0x80 && evtIn.key.keysym.unicode > 0 ){
+                                                printf( "%c (0x%04X)\n", (char)evtIn.key.keysym.unicode,
+                                                        evtIn.key.keysym.unicode );
+                                            } else{
+                                                printf( "? (0x%04X)\n", evtIn.key.keysym.unicode );
+                                            }
+                    #endif*/
+                }
+                pEvtOut->key.key = key;
+                pEvtOut->key.keyMods = keyModState_;
+                break;
+            } // end switch
+        } // end case SDL_KEYDOWN
+        break;
         case SDL_KEYUP:
-            {
-            switch(evtIn.key.keysym.sym) {
-                case SDLK_RSHIFT:
-                    keyModState_ = keyModState_ & !KMD_RSHIFT;
-                    break;
-                case SDLK_LSHIFT:
-                    keyModState_ = keyModState_ & !KMD_LSHIFT;
-                    break;
-                case SDLK_RCTRL:
-                    keyModState_ = keyModState_ & !KMD_RCTRL;
-                    // NOTICE Show cursor again
-                    g_System.showCursor();
-                    break;
-                case SDLK_LCTRL:
-                    keyModState_ = keyModState_ & !KMD_LCTRL;
-                    // NOTICE Show cursor again
-                    g_System.showCursor();
-                    break;
-                case SDLK_RALT:
-                    keyModState_ = keyModState_ & !KMD_RALT;
-                    break;
-                case SDLK_LALT:
-                    keyModState_ = keyModState_ & !KMD_LALT;
-                    break;
-                default:
-                    break;
+        {
+            switch (evtIn.key.keysym.sym) {
+            case SDLK_RSHIFT:
+                keyModState_ = keyModState_ & !KMD_RSHIFT;
+                break;
+            case SDLK_LSHIFT:
+                keyModState_ = keyModState_ & !KMD_LSHIFT;
+                break;
+            case SDLK_RCTRL:
+                keyModState_ = keyModState_ & !KMD_RCTRL;
+                // NOTICE Show cursor again
+                g_System.showCursor();
+                break;
+            case SDLK_LCTRL:
+                keyModState_ = keyModState_ & !KMD_LCTRL;
+                // NOTICE Show cursor again
+                g_System.showCursor();
+                break;
+            case SDLK_RALT:
+                keyModState_ = keyModState_ & !KMD_RALT;
+                break;
+            case SDLK_LALT:
+                keyModState_ = keyModState_ & !KMD_LALT;
+                break;
+            default:
+                break;
             }
-            }
-            break;
+        }
+        break;
         case SDL_MOUSEBUTTONUP:
             pEvtOut->button.type = EVT_MSE_UP;
             pEvtOut->button.x = evtIn.button.x;
@@ -349,7 +356,7 @@ bool like(int a, int b) {
     return a == b || a == b - 1 || a == b + 1;
 }
 
-void SystemSDL::setPalette6b3(const uint8 * pal, int cols) {
+void SystemSDL::setPalette6b3(const uint8* pal, int cols) {
     static SDL_Color palette[256];
 
     for (int i = 0; i < cols; ++i) {
@@ -366,14 +373,14 @@ void SystemSDL::setPalette6b3(const uint8 * pal, int cols) {
         if (like(palette[i].r, 28) && like(palette[i].g, 144)
             && like(palette[i].b, 0))
             printf("col %i = %i, %i, %i\n", i, palette[i].r, palette[i].g,
-                   palette[i].b);
+                palette[i].b);
 #endif
     }
 
     SDL_SetPaletteColors(temp_surf_->format->palette, palette, 0, cols);
 }
 
-void SystemSDL::setPalette8b3(const uint8 * pal, int cols) {
+void SystemSDL::setPalette8b3(const uint8* pal, int cols) {
     static SDL_Color palette[256];
 
     for (int i = 0; i < cols; ++i) {
@@ -399,7 +406,7 @@ void SystemSDL::setColor(uint8 index, uint8 r, uint8 g, uint8 b) {
  * This method uses the SDL_Image library to load a file called
  * cursors/cursors.png under the root path.
  * The file is loaded into the cursor surface.
- * \return False if the loading has failed. If it's the case, 
+ * \return False if the loading has failed. If it's the case,
  * cursor_surf_ will be NULL.
  */
 bool SystemSDL::loadCursorSprites() {
@@ -417,20 +424,21 @@ bool SystemSDL::loadCursorSprites() {
     return true;
 }
 
-/*! 
- * Returns the mouse pointer coordinates using SDL_GetMouseState. 
+/*!
+ * Returns the mouse pointer coordinates using SDL_GetMouseState.
  * \param x The x coordinate.
  * \param y The y coordinate.
  * \return See SDL_GetMouseState.
  */
-int SystemSDL::getMousePos(int *x, int *y) {
+int SystemSDL::getMousePos(int* x, int* y) {
     return SDL_GetMouseState(x, y);
 }
 
 void SystemSDL::hideCursor() {
     if (cursor_surf_ != NULL) {
         cursor_visible_ = false;
-    } else {
+    }
+    else {
         // Custom cursor surface doesn't
         // exists so use the default SDL Cursor
         SDL_ShowCursor(SDL_DISABLE);
@@ -440,7 +448,8 @@ void SystemSDL::hideCursor() {
 void SystemSDL::showCursor() {
     if (cursor_surf_ != NULL) {
         cursor_visible_ = true;
-    } else {
+    }
+    else {
         // Custom cursor surface doesn't
         // exists so use the default SDL Cursor
         SDL_ShowCursor(SDL_ENABLE);

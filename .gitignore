@@ -4,3 +4,12 @@
 /cmake-build-debug
 /cmake-build-release
 /SYND
+
+FreeSynd/*
+!FreeSynd/put_game_files_here.txt
+build_x64win/.vs
+build_x64win/CMakeFiles
+build_x64win/src
+build_x64win/x64
+build_x64win/cmake_install.cmake
+build_x64win/CMakeCache.txt

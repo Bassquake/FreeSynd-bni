@@ -25,8 +25,7 @@ set (SOURCES
 	core/missionbriefing.cpp
 	core/researchmanager.cpp
 	ia/actions.cpp
-	ia/behaviour.cpp
-	default_ini.h
+	ia/behaviour.cpp	
 	freesynd.cpp
     ipastim.cpp
 	gfx/dirtylist.cpp
@@ -86,6 +85,7 @@ set (SOURCES
 )
 
 set(HEADERS
+	default_ini.h
 	appcontext.h
 	agent.h
 	agentmanager.h
